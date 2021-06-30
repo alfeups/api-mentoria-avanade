@@ -18,4 +18,17 @@ public class ProdutoService {
 
     }
 
+    public void inserir(Produto produto){
+        System.out.println("INDERIDO: " + produto);
+
+    }
+
+    public void alterar(Produto produto){
+        System.out.println("ALTERADO: " + produto);
+    }
+
+    public void excluir(Long id){
+        System.out.println("EXCLUIDO: " + id);
+    }
+
 }

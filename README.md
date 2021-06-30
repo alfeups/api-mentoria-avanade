@@ -27,3 +27,4 @@ mvn spring-boot:run
 
 <p> Na classe 'ProdutoService' criar produtos manualmente com retorno em forma de lista, já que os produtos foram adicionados como Listproduto.</p>
 
+<p>Após testar o método aplicado pelo navegador, criar o Inserir(). Foram utilizadas as anotações @PostMapping, @RequestBody, @ResponseStatus.</p>
