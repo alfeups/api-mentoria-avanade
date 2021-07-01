@@ -16,8 +16,7 @@ public class ProdutoController {
     private ProdutoService produtoService;
 
     @GetMapping
-    public List<Produto> listar(){
-
+    public Iterable<Produto> listar(){
         return produtoService.findAll();
     }
 
@@ -25,10 +24,18 @@ public class ProdutoController {
     @ResponseStatus(HttpStatus.CREATED)
     public void inserir(@RequestBody Produto produto){
         produtoService.inserir(produto);
-
     }
 
-    
+    @PutMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void alterar(@RequestBody Produto produto){
+        produtoService.alterar(produto);
+    }
 
-
+    @DeleteMapping
+    @RequestMapping("{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void excluir(@PathVariable Integer id){
+        produtoService.excluir(id);
+    }
 }
